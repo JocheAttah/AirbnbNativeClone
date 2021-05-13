@@ -1,8 +1,17 @@
 import React from 'react';
 import styles from './styles';
-import {View, Text, ImageBackground, Pressable} from 'react-native';
-import {HomeImage} from '../../../assets';
+import {View, Text, ImageBackground, Pressable, ScrollView} from 'react-native';
+import {
+  Abuja,
+  Badagry,
+  HomeImage,
+  Ibadan,
+  Ikeja,
+  Lagos,
+  Ph,
+} from '../../../assets';
 import Fontisto from 'react-native-vector-icons/Fontisto';
+import Places from '../../components/Places';
 
 const Home = () => {
   const handlePress = () => {
@@ -13,7 +22,7 @@ const Home = () => {
   };
 
   return (
-    <View>
+    <ScrollView>
       {/* The search bar */}
       <Pressable style={styles.searchButton} onPress={handleSearch}>
         <Fontisto name={'search'} size={20} color={'#f15454'} />
@@ -32,7 +41,28 @@ const Home = () => {
           </Pressable>
         </View>
       </ImageBackground>
-    </View>
+      <View style={styles.content}>
+        <Text style={styles.textHeader}>Explore Nearby</Text>
+        <View>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <View style={styles.fix}>
+              <Places image={Lagos} name="Lagos" distance="11 hour drive" />
+              <Places image={Ph} name="Port-Harcourt" distance="8 hour drive" />
+            </View>
+            <View style={styles.fix}>
+              <Places image={Ibadan} name="Ibadan" distance="9 hour drive" />
+              <Places image={Ikeja} name="Ikeja" distance="30 minutes drive" />
+            </View>
+            <View style={styles.fix}>
+              <Places image={Abuja} name="Abuja" distance="15 minutes drive" />
+              <Places image={Badagry} name="Badagry" distance="13 hour drive" />
+            </View>
+          </ScrollView>
+
+          <Text style={styles.textHeader}>Live anywhere</Text>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 

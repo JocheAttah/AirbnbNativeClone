@@ -56,6 +56,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     paddingVertical: 12,
   },
+  textHeader: {
+    fontSize: 22,
+    fontWeight: '700',
+    marginTop: 30,
+    marginBottom: 15,
+  },
+
+  fix: {flexDirection: 'column', marginRight: 10},
 });
 
 export default styles;
