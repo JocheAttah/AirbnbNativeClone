@@ -5,10 +5,13 @@ import {
   Abuja,
   Badagry,
   EntireHomes,
+  Experiences,
+  Featured,
   HomeImage,
   Ibadan,
   Ikeja,
   Lagos,
+  Online,
   Outdoors,
   Pets,
   Ph,
@@ -70,6 +73,28 @@ const Home = () => {
             <Location image={Unique} name="Unique stays" />
             <Location image={EntireHomes} name="Entire homes" />
             <Location image={Pets} name="Pets allowed" />
+          </ScrollView>
+
+          <Text style={styles.textHeader}>Discover Experiences</Text>
+          <Text style={styles.paragraph}>
+            Unique activities with local experts—in person or online.
+          </Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <Location
+              image={Featured}
+              name="Featured collection: Wanderlust"
+              paragraph="Travel from home with Online Experiences."
+            />
+            <Location
+              image={Online}
+              name="Online Experiences"
+              paragraph="Live, interactive activities led by Hosts."
+            />
+            <Location
+              image={Experiences}
+              name="Experiences"
+              paragraph="Local things to do, wherever you are."
+            />
           </ScrollView>
         </View>
       </View>

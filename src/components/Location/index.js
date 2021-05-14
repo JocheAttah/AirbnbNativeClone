@@ -2,11 +2,16 @@ import React from 'react';
 import {Dimensions, StyleSheet} from 'react-native';
 import {View, Text, Image} from 'react-native';
 
-const Location = ({name, image}) => {
+const Location = ({name, image, paragraph}) => {
   return (
     <View style={styles.locationContainer}>
       <Image source={image} style={styles.locationImage} />
       <Text style={styles.locationTitle}>{name}</Text>
+      {paragraph ? (
+        <Text style={styles.paragraph}>{paragraph}</Text>
+      ) : (
+        <Text></Text>
+      )}
     </View>
   );
 };
@@ -29,7 +34,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   locationTitle: {
+    fontSize: 14,
     marginTop: 10,
-    fontWeight: '400',
+    fontWeight: '500',
+  },
+  paragraph: {
+    fontSize: 14,
+    color: '#222222',
+    lineHeight: 20,
+    fontWeight: '300',
+    marginBottom: 20,
   },
 });

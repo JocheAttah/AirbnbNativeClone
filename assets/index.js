@@ -9,6 +9,9 @@ import Outdoors from './images/outdoor.png';
 import Unique from './images/unique.png';
 import EntireHomes from './images/entireHomes.png';
 import Pets from './images/pets.png';
+import Featured from './images/featured.png';
+import Online from './images/online.png';
+import Experiences from './images/experiences.png';
 
 export {
   HomeImage,
@@ -22,4 +25,7 @@ export {
   Unique,
   EntireHomes,
   Pets,
+  Featured,
+  Online,
+  Experiences,
 };
