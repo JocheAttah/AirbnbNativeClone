@@ -21,15 +21,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: Dimensions.get('screen').width - 150,
     marginTop: 10,
-    // backgroundColor: 'grey',
     borderRadius: 10,
   },
-  //   tinyImageContainer: {
-  // width: 80,
-  // height: 80,
-  // backgroundColor: 'black',
-  // borderRadius: 10,
-  //   },
   tinyImage: {
     width: 80,
     height: 80,

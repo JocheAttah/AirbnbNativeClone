@@ -4,14 +4,19 @@ import {View, Text, ImageBackground, Pressable, ScrollView} from 'react-native';
 import {
   Abuja,
   Badagry,
+  EntireHomes,
   HomeImage,
   Ibadan,
   Ikeja,
   Lagos,
+  Outdoors,
+  Pets,
   Ph,
+  Unique,
 } from '../../../assets';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Places from '../../components/Places';
+import Location from '../../components/Location';
 
 const Home = () => {
   const handlePress = () => {
@@ -60,6 +65,12 @@ const Home = () => {
           </ScrollView>
 
           <Text style={styles.textHeader}>Live anywhere</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <Location image={Outdoors} name="Outdoor getaways" />
+            <Location image={Unique} name="Unique stays" />
+            <Location image={EntireHomes} name="Entire homes" />
+            <Location image={Pets} name="Pets allowed" />
+          </ScrollView>
         </View>
       </View>
     </ScrollView>
