@@ -64,6 +64,50 @@ const styles = StyleSheet.create({
   },
 
   fix: {flexDirection: 'column', marginRight: 10},
+  learnMoreSection: {
+    width: Dimensions.get('screen').width - 50,
+    marginTop: 20,
+  },
+  learnMoreContent: {
+    backgroundColor: '#221C1A',
+    padding: 30,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  header: {
+    color: '#ffffff',
+    fontSize: 20,
+    textAlign: 'center',
+    fontWeight: '700',
+    marginBottom: 10,
+  },
+  learnMoreParagraph: {
+    color: '#ffffff',
+    textAlign: 'center',
+    lineHeight: 20,
+    marginBottom: 12,
+  },
+  imageLearnMore: {
+    width: Dimensions.get('screen').width - 50,
+    height: Dimensions.get('screen').width - 180,
+    resizeMode: 'cover',
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+  },
+  learnMoreButton: {
+    backgroundColor: '#ffffff',
+    width: 130,
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+  },
+  learnMoreButtonText: {
+    color: '#222222',
+    fontWeight: '600',
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+  },
 });
 
 export default styles;

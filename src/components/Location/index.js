@@ -7,11 +7,7 @@ const Location = ({name, image, paragraph}) => {
     <View style={styles.locationContainer}>
       <Image source={image} style={styles.locationImage} />
       <Text style={styles.locationTitle}>{name}</Text>
-      {paragraph ? (
-        <Text style={styles.paragraph}>{paragraph}</Text>
-      ) : (
-        <Text></Text>
-      )}
+      {paragraph ? <Text style={styles.paragraph}>{paragraph}</Text> : <Text />}
     </View>
   );
 };

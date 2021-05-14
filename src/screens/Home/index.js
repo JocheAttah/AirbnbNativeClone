@@ -1,6 +1,13 @@
 import React from 'react';
 import styles from './styles';
-import {View, Text, ImageBackground, Pressable, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  Pressable,
+  ScrollView,
+  Image,
+} from 'react-native';
 import {
   Abuja,
   Badagry,
@@ -11,6 +18,7 @@ import {
   Ibadan,
   Ikeja,
   Lagos,
+  LearnMore,
   Online,
   Outdoors,
   Pets,
@@ -74,6 +82,23 @@ const Home = () => {
             <Location image={EntireHomes} name="Entire homes" />
             <Location image={Pets} name="Pets allowed" />
           </ScrollView>
+
+          <View>
+            <View style={styles.learnMoreSection}>
+              <View style={styles.learnMoreContent}>
+                <Text style={styles.header}>Become a Host</Text>
+                <Text style={styles.learnMoreParagraph}>
+                  Earn Extra income and unlock new {'\n'}
+                  opportunities by sharing {'\n'}
+                  your space
+                </Text>
+                <Pressable style={styles.learnMoreButton} onPress={handlePress}>
+                  <Text style={styles.learnMoreButtonText}>Learn more</Text>
+                </Pressable>
+              </View>
+            </View>
+            <Image source={LearnMore} style={styles.imageLearnMore} />
+          </View>
 
           <Text style={styles.textHeader}>Discover Experiences</Text>
           <Text style={styles.paragraph}>

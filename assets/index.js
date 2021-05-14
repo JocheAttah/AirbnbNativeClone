@@ -12,7 +12,7 @@ import Pets from './images/pets.png';
 import Featured from './images/featured.png';
 import Online from './images/online.png';
 import Experiences from './images/experiences.png';
-
+import LearnMore from './images/learnMore.png';
 export {
   HomeImage,
   Abuja,
@@ -28,4 +28,5 @@ export {
   Featured,
   Online,
   Experiences,
+  LearnMore,
 };
