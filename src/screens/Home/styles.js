@@ -3,19 +3,21 @@ import {Dimensions, StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   content: {
     marginLeft: 25,
+    // marginTop: -30,
   },
   image: {
     width: '100%',
+    // width: Dimensions.get('screen').width,
     height: 500,
     resizeMode: 'cover',
     justifyContent: 'center',
   },
   title: {
-    fontSize: 50,
+    fontSize: 44,
     fontWeight: '700',
     color: '#222222',
     letterSpacing: 0.32,
-    lineHeight: 50,
+    lineHeight: 45,
     marginBottom: 10,
   },
   paragraph: {
@@ -65,12 +67,15 @@ const styles = StyleSheet.create({
 
   fix: {flexDirection: 'column', marginRight: 10},
   learnMoreSection: {
-    width: Dimensions.get('screen').width - 50,
+    // width: Dimensions.get('screen').width - 50,
+    // flexDirection: 'row',
+    width: '94%',
     marginTop: 20,
   },
   learnMoreContent: {
     backgroundColor: '#221C1A',
     padding: 30,
+    paddingBottom: 20,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
   },
@@ -88,7 +93,8 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   imageLearnMore: {
-    width: Dimensions.get('screen').width - 50,
+    // width: Dimensions.get('screen').width - 50,
+    width: '94%',
     height: Dimensions.get('screen').width - 180,
     resizeMode: 'cover',
     borderBottomLeftRadius: 10,
