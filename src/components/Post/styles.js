@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginVertical: 10,
     justifyContent: 'space-between',
-    marginRight: 5,
+    marginRight: 10,
   },
   rating: {
     fontSize: 16,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     color: '#717171',
   },
   details: {
-    width: '85%',
+    width: '82%',
     marginVertical: 10,
     fontSize: 16,
     color: '#717171',
