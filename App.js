@@ -8,13 +8,15 @@
 
 import React from 'react';
 import {SafeAreaView} from 'react-native';
+import Post from './src/components/Post';
 import Home from './src/screens/Home';
 
 const App = () => {
   return (
     <>
       <SafeAreaView>
-        <Home />
+        {/* <Home /> */}
+        <Post />
       </SafeAreaView>
     </>
   );

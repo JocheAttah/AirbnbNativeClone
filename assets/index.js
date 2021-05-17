@@ -13,6 +13,7 @@ import Featured from './images/featured.png';
 import Online from './images/online.png';
 import Experiences from './images/experiences.png';
 import LearnMore from './images/learnMore.png';
+import Room1 from './images/Room1.png';
 export {
   HomeImage,
   Abuja,
@@ -29,4 +30,5 @@ export {
   Online,
   Experiences,
   LearnMore,
+  Room1,
 };
