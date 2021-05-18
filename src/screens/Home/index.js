@@ -29,7 +29,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 import Places from '../../components/Places';
 import Location from '../../components/Location';
 
-const Home = () => {
+const HomeScreen = () => {
   const handlePress = () => {
     console.warn('Get Inspired Pressed');
   };
@@ -127,4 +127,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;

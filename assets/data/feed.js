@@ -30,6 +30,8 @@ export default [
       latitude: 28.4815637,
       longitude: -16.2291304,
     },
+    rating: 4.0,
+    reviewNo: 50,
   },
   {
     id: '2',
@@ -45,6 +47,8 @@ export default [
       latitude: 28.2515637,
       longitude: -16.3991304,
     },
+    rating: 5,
+    reviewNo: 5,
   },
   {
     id: '3',
@@ -60,5 +64,7 @@ export default [
       latitude: 28.4815637,
       longitude: -16.2991304,
     },
+    rating: 4.75,
+    reviewNo: 25,
   },
 ];

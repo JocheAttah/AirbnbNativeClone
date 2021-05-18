@@ -2,7 +2,6 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 import styles from './styles';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-import {Room1} from '../../../assets';
 
 const Post = props => {
   const post = props.post;
