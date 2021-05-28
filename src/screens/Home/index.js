@@ -28,13 +28,16 @@ import {
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Places from '../../components/Places';
 import Location from '../../components/Location';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
   const handlePress = () => {
     console.warn('Get Inspired Pressed');
   };
   const handleSearch = () => {
-    console.warn('User Searching');
+    navigation.navigate('Destination Search');
   };
 
   return (

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   //     width: '94%',
   //   },
   linearGradient: {
-    height: '55%',
+    height: '40%',
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
   },
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginTop: -20,
     width: '100%',
-    borderRadius: 25,
+    borderRadius: 28,
     padding: 20,
   },
   headerSection: {
@@ -41,6 +41,9 @@ const styles = StyleSheet.create({
   headerParagraph: {
     fontSize: 14,
     fontWeight: '300',
+  },
+  rowsContainer: {
+    flexDirection: 'column',
   },
   row: {
     flexDirection: 'row',
@@ -85,6 +88,34 @@ const styles = StyleSheet.create({
   counterAction: {
     fontSize: 30,
     color: '#585f6a',
+  },
+  actionSection: {
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    paddingVertical: 20,
+  },
+  skipButton: {
+    borderBottomWidth: 3,
+    borderBottomStartRadius: 3,
+    borderBottomEndRadius: 3,
+    borderColor: 'black',
+  },
+  skipText: {
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  searchButton: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    backgroundColor: '#f15454',
+    borderRadius: 10,
+  },
+  searchText: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#fff',
   },
 });
 
