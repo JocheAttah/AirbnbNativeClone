@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#fff',
   },
+  textInputContainer: {
+    height: '100%',
+  },
   icon: {
     paddingRight: 10,
   },
