@@ -1,10 +1,11 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {View, TextInput, FlatList, Text, Pressable} from 'react-native';
+import {View} from 'react-native';
 import styles from './styles';
-import Fontisto from 'react-native-vector-icons/Fontisto';
 import searchResults from '../../../assets/data/search';
-import Entypo from 'react-native-vector-icons/Entypo';
 import {useNavigation} from '@react-navigation/native';
+import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import SuggestionRow from './SuggestionRow';
 
 const DestinationSearchScreen = () => {
   const [destination, setDestination] = useState('');
@@ -14,41 +15,24 @@ const DestinationSearchScreen = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.textInputContainer}>
-        {/* <Fontisto
-          name={'arrow-left-l'}
-          size={24}
-          color={'#333'}
-          style={styles.icon}
-        /> */}
-        <TextInput
-          style={styles.textInput}
-          onChangeText={setDestination}
-          value={destination}
-          placeholder="Where are you  going?"
+      <View style={{height: 500}}>
+        <GooglePlacesAutocomplete
+          styles={{textInput: styles.textInput}}
+          placeholder="Where are you  going"
+          onPress={(data, details = null) => {
+            // 'details' is provided when fetchDetails = true
+            console.log(data, details);
+            navigation.navigate('Guest');
+          }}
+          query={{
+            key: 'AIzaSyD3eYC2Fmvfr4rVSP2X4w6E87aW8q4HuUU',
+            language: 'en',
+            types: '{cities}',
+          }}
+          suppressDefaultStyles
+          renderRow={item => <SuggestionRow item={item} />}
         />
       </View>
-
-      {/* list of destination */}
-      <FlatList
-        style={styles.listContainer}
-        data={searchResults}
-        renderItem={({item}) => (
-          <Pressable
-            onPress={() => navigation.navigate('Guest')}
-            style={styles.row}>
-            <View style={styles.iconContainer}>
-              <Entypo
-                name={'location-pin'}
-                size={25}
-                color={'#333'}
-                style={styles.locationIcon}
-              />
-            </View>
-            <Text style={styles.description}>{item.description}</Text>
-          </Pressable>
-        )}
-      />
     </View>
   );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import BottomSheet from '@gorhom/bottom-sheet';
 import {View, FlatList, Text} from 'react-native';
@@ -10,7 +11,7 @@ const renderItem = ({item}) => (
 
 const SearchResultsScreen = () => {
   return (
-    <View style={{flex: 1, marginTop: 50,}}>
+    <View style={{flex: 1, marginTop: 50}}>
       <View>
         <Text>fhfjfkflflfl</Text>
         <Text>fhfjfkflflfl</Text>
@@ -21,7 +22,17 @@ const SearchResultsScreen = () => {
         <Text>fhfjfkflflfl</Text>
         <Text>fhfjfkflflfl</Text>
       </View>
-      <BottomSheet initialSnapIndex={0} snapPoints={['3%', '50%', '100%']}>
+      <BottomSheet snapPoints={['7%', '50%', '100%']}>
+        <Text
+          style={{
+            textAlign: 'center',
+            fontSize: 16,
+            fontWeight: '600',
+            paddingTop: 5,
+            paddingBottom: 10,
+          }}>
+          {feed.length} Monthly stays
+        </Text>
         <FlatList data={feed} renderItem={renderItem} />
       </BottomSheet>
     </View>

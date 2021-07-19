@@ -2,17 +2,19 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    width: '90%',
-    marginTop: 20,
+    width: '100%',
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingTop: 20,
     alignSelf: 'center',
-  },
-  textInputContainer: {
-    flexDirection: 'row',
+    backgroundColor: '#fff',
   },
   icon: {
-    marginRight: 10,
+    paddingRight: 10,
   },
-  textInput: {fontSize: 20},
+  textInput: {
+    fontSize: 20,
+  },
   listContainer: {
     marginTop: 35,
   },
