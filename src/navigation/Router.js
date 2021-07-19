@@ -26,13 +26,14 @@ const Router = () => {
         <Stack.Screen
           name="Guest"
           component={GuestScreen}
-          options={{title: `Who's coming?`}}
+          options={{title: "Who's coming?"}}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Search Results"
           component={SearchResultsScreen}
-          options={{title: `Like any?`}}
-        />
+          options={{title: 'Search', headerShown: false}}
+          // options={{title: '`Like any?`'}}
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

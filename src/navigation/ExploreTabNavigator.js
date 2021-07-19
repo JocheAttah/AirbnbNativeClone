@@ -16,7 +16,8 @@ const Router = () => {
       <Stack.Screen
         name="Search Results"
         component={SearchResultsScreen}
-        options={{title: 'Search your Destination'}}
+        // options={{title: 'Search your Destination'}}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );
