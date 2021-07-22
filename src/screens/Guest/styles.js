@@ -1,14 +1,13 @@
 import {StyleSheet} from 'react-native';
+import {Dimensions} from 'react-native';
+const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    width: width,
   },
-  //   content: {
-  //     width: '94%',
-  //   },
   linearGradient: {
-    height: '40%',
+    height: 0.45 * height,
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
   },
