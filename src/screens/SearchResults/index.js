@@ -12,11 +12,11 @@ const renderItem = ({item}) => (
 
 const SearchResultsScreen = () => {
   return (
-    <View style={{flex: 1, marginTop: 50}}>
+    <View style={{flex: 1, backgroundColor: 'transparent'}}>
       <View>
         <SearchResultsMap />
       </View>
-      <BottomSheet snapPoints={['7%', '50%', '100%']}>
+      <BottomSheet snapPoints={['5%', '50%', '100%']}>
         <Text
           style={{
             textAlign: 'center',
