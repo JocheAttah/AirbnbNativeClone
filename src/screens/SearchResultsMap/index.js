@@ -1,33 +1,34 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {StyleSheet, View, StatusBar} from 'react-native';
+import {View, FlatList, useWindowDimensions} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import CustomMarker from '../../components/CustomMarker';
 import places from '../../../assets/data/feed';
 import {Dimensions} from 'react-native';
-import Post from '../../components/Post/PostCarousel';
+// import Post from '../../components/Post/PostCarousel';
 import PostCarousel from '../../components/Post/PostCarousel';
-const {width, height} = Dimensions.get('window');
 
 const SearchResultsMap = () => {
+  const width = useWindowDimensions().width;
+
   const [selectedPlaceId, setSelectedPlaceId] = useState(null);
   return (
     <View
       style={{
-        width: width,
-        height: height,
+        width: '100%',
+        height: '100%',
       }}>
       <MapView
         style={{
           flex: 1,
           justifyContent: 'flex-end',
-          width: width,
-          height: height,
+          width: '100%',
+          height: '100%',
         }}
         provider={PROVIDER_GOOGLE}
         initialRegion={{
-          latitude: places[0].coordinate.latitude,
-          longitude: places[0].coordinate.longitude,
+          latitude: 28.3279822,
+          longitude: -16.5124847,
           latitudeDelta: 0.8,
           longitudeDelta: 0.8,
         }}>
@@ -40,10 +41,19 @@ const SearchResultsMap = () => {
             onPress={() => setSelectedPlaceId(place.id)}
           />
         ))}
-        <View>
-          <PostCarousel post={places[0]} />
-        </View>
       </MapView>
+      <View style={[{position: 'absolute', bottom: 40}, {marginLeft: 10}]}>
+        <FlatList
+          data={places}
+          renderItem={({item}) => <PostCarousel post={item} />}
+          horizontal
+          showsHorizontalScrollIndicator
+          snapToInterval={width - 50}
+          snapToAlignment={'center'}
+          decelerationRate={'fast'}
+        />
+        {/* <PostCarousel post={places[0]} /> */}
+      </View>
     </View>
   );
 };

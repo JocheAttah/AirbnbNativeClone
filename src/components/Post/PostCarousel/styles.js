@@ -3,11 +3,21 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     height: 120,
-    marginHorizontal: 20,
-    marginBottom: 170,
+    marginHorizontal: 7,
+    marginBottom: 40,
     flexDirection: 'row',
     backgroundColor: '#fff',
     borderRadius: 10,
+
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   },
   image: {
     height: '100%',

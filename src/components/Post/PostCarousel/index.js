@@ -1,13 +1,15 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, useWindowDimensions} from 'react-native';
 import styles from './styles';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
 const PostCarousel = props => {
   const post = props.post;
+  const width = useWindowDimensions().width;
+
   console.log(post);
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {width: width - 60}]}>
       {/* image/ images component */}
       <Image
         source={{
