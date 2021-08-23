@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {View, FlatList, useWindowDimensions} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import CustomMarker from '../../components/CustomMarker';
@@ -12,6 +12,15 @@ const SearchResultsMap = () => {
   const width = useWindowDimensions().width;
 
   const [selectedPlaceId, setSelectedPlaceId] = useState(null);
+
+  const flatListRef = useRef();
+
+  useEffect(() => {
+    if (!selectedPlaceId || !flatListRef) return;
+    const index = places.findIndex(place => place.id === selectedPlaceId);
+    flatListRef.current.scrollToIndex({index: index});
+  }, [selectedPlaceId]);
+
   return (
     <View
       style={{
@@ -44,6 +53,7 @@ const SearchResultsMap = () => {
       </MapView>
       <View style={[{position: 'absolute', bottom: 40}, {marginLeft: 10}]}>
         <FlatList
+          ref={flatListRef}
           data={places}
           renderItem={({item}) => <PostCarousel post={item} />}
           horizontal
