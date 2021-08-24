@@ -15,7 +15,10 @@ const DestinationSearchScreen = () => {
     <View style={styles.container}>
       <View style={[styles.textInputContainer]}>
         <GooglePlacesAutocomplete
-          styles={{textInput: styles.textInput}}
+          styles={{
+            // textInputContainer: styles.textInputContainer,
+            textInput: styles.textInput,
+          }}
           placeholder="Where are you  going"
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
@@ -27,7 +30,7 @@ const DestinationSearchScreen = () => {
             language: 'en',
             types: '(cities)',
           }}
-          autoFocus={true}
+          // autoFocus={true}
           suppressDefaultStyles
           renderRow={item => <SuggestionRow item={item} />}
         />

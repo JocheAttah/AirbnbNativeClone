@@ -7,6 +7,7 @@ import {
   Pressable,
   ScrollView,
   Image,
+  Dimensions,
 } from 'react-native';
 import {
   Abuja,
@@ -63,7 +64,12 @@ const HomeScreen = () => {
       <View style={styles.content}>
         <Text style={styles.textHeader}>Explore Nearby</Text>
         <View>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            snapToInterval={Dimensions.get('screen').width - 130}
+            snapToAlignment={'center'}
+            decelerationRate={'fast'}>
             <View style={styles.fix}>
               <Places image={Lagos} name="Lagos" distance="11 hour drive" />
               <Places image={Ph} name="Port-Harcourt" distance="8 hour drive" />
@@ -79,7 +85,12 @@ const HomeScreen = () => {
           </ScrollView>
 
           <Text style={styles.textHeader}>Live anywhere</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            snapToInterval={Dimensions.get('screen').width - 130}
+            snapToAlignment={'center'}
+            decelerationRate={'fast'}>
             <Location image={Outdoors} name="Outdoor getaways" />
             <Location image={Unique} name="Unique stays" />
             <Location image={EntireHomes} name="Entire homes" />
@@ -107,7 +118,12 @@ const HomeScreen = () => {
           <Text style={styles.paragraph}>
             Unique activities with local experts—in person or online.
           </Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            snapToInterval={Dimensions.get('screen').width - 130}
+            snapToAlignment={'center'}
+            decelerationRate={'fast'}>
             <Location
               image={Featured}
               name="Featured collection: Wanderlust"

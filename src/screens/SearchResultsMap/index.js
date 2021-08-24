@@ -57,7 +57,7 @@ const SearchResultsMap = () => {
           data={places}
           renderItem={({item}) => <PostCarousel post={item} />}
           horizontal
-          showsHorizontalScrollIndicator
+          showsHorizontalScrollIndicator={false}
           snapToInterval={width - 50}
           snapToAlignment={'center'}
           decelerationRate={'fast'}

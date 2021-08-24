@@ -5,9 +5,10 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     width: width,
+    height: height,
   },
   linearGradient: {
-    height: 0.45 * height,
+    height: 0.40 * height,
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
   },
@@ -79,8 +80,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 30,
     borderColor: 'lightgrey',
-    width: 44,
-    height: 44,
+    width: 42,
+    height: 42,
     justifyContent: 'center',
     alignItems: 'center',
   },

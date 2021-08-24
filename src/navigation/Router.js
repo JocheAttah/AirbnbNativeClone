@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 const Router = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={'Guest'}>
+      <Stack.Navigator initialRouteName={'Home'}>
         <Stack.Screen
           name="Home"
           component={HomeTabNavigator}

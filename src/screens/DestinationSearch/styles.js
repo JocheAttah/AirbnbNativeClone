@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontSize: 20,
+    color: '#333',
   },
   listContainer: {
     marginTop: 35,
